@@ -1,4 +1,5 @@
 
+import { CheckoutData, ReturnData } from '@/lib/interfaces';
 import axios from 'axios';
 
 const api = axios.create({ baseURL: 'http://localhost:4000/mern-challenge' })
@@ -44,3 +45,5 @@ api.interceptors.response.use(
 );
 
 export const getBookData = async() => await api.get('books/all');
+export const checkoutBook = async(payload: CheckoutData) => await api.post('circulations/checkout', payload);
+export const returnBook = async(payload: ReturnData) => await api.post('circulations/return', payload);

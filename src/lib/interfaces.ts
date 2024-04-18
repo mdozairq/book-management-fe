@@ -20,3 +20,4 @@ export interface ReturnData {
     member_id: number,
     date: Date
 }
+
