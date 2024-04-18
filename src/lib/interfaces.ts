@@ -6,3 +6,17 @@ export interface Books {
     created_at: Date,
     updated_at: Date
 }
+
+export interface CheckoutData {
+    eventtype: string,
+    book_id: number,
+    member_id: number,
+    date: Date
+}
+
+export interface ReturnData {
+    eventtype: string,
+    book_id: number,
+    member_id: number,
+    date: Date
+}

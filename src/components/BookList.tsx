@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation'
 
 export const BookList = () => {
     const [books, setBooks] = useState<[] | any>([])
+    const [showMemberField, setShowMemberField] = useState<boolean>(false)
     let navigation = useRouter()
 
     let getBookDatas = async () => {
@@ -46,7 +47,7 @@ export const BookList = () => {
                             <button className="bg-orange-400 p4 m-2 p-2 rounded-sm" onClick={() => handleReturn(book)}>Return</button>
                         </div>
                     </div>)
-                })
+                })                
             }
         </div>
     )
