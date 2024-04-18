@@ -25,7 +25,7 @@ export const CheckoutForm = () => {
                 console.log(res);
                 
                 if(res.status >= 200 && res.status < 300) {
-                    alert("Book returned Successfully!")
+                    alert("Book checked out Successfully!")
                     navigation.back()
                 }
             } catch (error: any) {
@@ -34,7 +34,7 @@ export const CheckoutForm = () => {
             }
         } else {
             alert("Please Enter Member ID")
-            navigation.back()
+            navigation.push("/")
         }
     }
 

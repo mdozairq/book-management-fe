@@ -34,7 +34,7 @@ export const ReturnForm = () => {
             }
         } else {
             alert("Please Enter Member ID")
-            navigation.back()
+            navigation.push("/")
         }
     }
 
